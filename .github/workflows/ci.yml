@@ -13,7 +13,7 @@ jobs:
         with:
           php-version: "7.1"
           extensions: mbstring, intl, pdo_sqlite
-          tools: composer:v1
+          tools: composer:v2
       - run: composer install --no-interaction --prefer-dist --no-progress
       - name: Lint PHP
         run: find src tests -name '*.php' -print0 | xargs -0 -n1 php -l
